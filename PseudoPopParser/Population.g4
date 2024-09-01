@@ -45,6 +45,7 @@ key
 	| EVENTPOPFILE
 	| TARGET
 	| ACTION
+	| PARAM
 	| OBJECTIVE
 	| INITIALCOOLDOWN
 	| BEGINATWAVE
@@ -387,6 +388,7 @@ eventattributes_body
 output_body
 	: TARGET value
 	| ACTION value
+	| PARAM value
 	;
 
 endc // Parser anchor method
@@ -490,6 +492,7 @@ MAXINTERVAL				: M A X I N T E R V A L | '"' MAXINTERVAL '"' ;
 EVENTPOPFILE			: E V E N T P O P F I L E | '"' EVENTPOPFILE '"' ;
 TARGET					: T A R G E T | '"' TARGET '"' ;
 ACTION					: A C T I O N | '"' ACTION '"' ;
+PARAM					: P A R A M | '"' PARAM '"' ;
 
 // Keys - Mission
 OBJECTIVE				: O B J E C T I V E | '"' OBJECTIVE '"' ;

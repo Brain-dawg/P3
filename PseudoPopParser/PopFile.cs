@@ -252,6 +252,7 @@ namespace PseudoPopParser {
 		public string OutputName;
 		public string Target;
 		public string Action;
+		public string Param;
 
 		public LogicOutput(string Name) {
 			this.OutputName = Name;
