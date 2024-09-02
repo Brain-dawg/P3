@@ -46,6 +46,7 @@ key
 	| TARGET
 	| ACTION
 	| PARAM
+	| DELAY
 	| OBJECTIVE
 	| INITIALCOOLDOWN
 	| BEGINATWAVE
@@ -389,6 +390,7 @@ output_body
 	: TARGET value
 	| ACTION value
 	| PARAM value
+	| DELAY value
 	;
 
 endc // Parser anchor method
@@ -493,6 +495,7 @@ EVENTPOPFILE			: E V E N T P O P F I L E | '"' EVENTPOPFILE '"' ;
 TARGET					: T A R G E T | '"' TARGET '"' ;
 ACTION					: A C T I O N | '"' ACTION '"' ;
 PARAM					: P A R A M | '"' PARAM '"' ;
+DELAY					: D E L A Y | '"' DELAY '"' ;
 
 // Keys - Mission
 OBJECTIVE				: O B J E C T I V E | '"' OBJECTIVE '"' ;
