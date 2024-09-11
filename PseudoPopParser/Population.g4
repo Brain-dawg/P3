@@ -182,6 +182,7 @@ template_body
 	| TOTALCURRENCY value
 	| TOTALCOUNT value
 	| WHERE value
+	| CLOSESTPOINT value
 	| MAXACTIVE value
 	| SPAWNCOUNT value
 	| SUPPORT value
@@ -223,6 +224,7 @@ wavespawn_body
 	| TOTALCURRENCY value
 	| TOTALCOUNT value
 	| WHERE value
+	| CLOSESTPOINT value
 	| MAXACTIVE value
 	| SPAWNCOUNT value
 	| SUPPORT value
@@ -256,6 +258,7 @@ randomplacement_body
 
 periodicspawn_body
 	: WHERE value
+	| CLOSESTPOINT value
 	| WHEN ( value | '{' when_body* '}' )
 	| spawners
 	| generic_kv
@@ -273,6 +276,7 @@ mission_body
 	: OBJECTIVE value
 	| INITIALCOOLDOWN value
 	| WHERE value
+	| CLOSESTPOINT value
 	| BEGINATWAVE value
 	| RUNFORTHISMANYWAVES value
 	| COOLDOWNTIME value

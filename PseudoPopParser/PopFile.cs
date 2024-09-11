@@ -72,6 +72,7 @@ namespace PseudoPopParser {
 		public uint BeginAtWave;
 		public uint DesiredCount;
 		public List<string> Where { get; set; } = new List<string>();
+		public List<string> ClosestPoint { get; set; } = new List<string>();
 		public dynamic Spawner;
 
 		public Mission() { }
@@ -116,6 +117,7 @@ namespace PseudoPopParser {
 		public bool SupportLimited;
 		public bool RandomSpawn;
 		public List<string> Where = new List<string>();
+		public List<string> ClosestPoint = new List<string>();
 		public dynamic Spawner;
 
 		// Sounds
@@ -152,6 +154,9 @@ namespace PseudoPopParser {
 
 			if (this.Where != Template.Where && Template.Where.Count > 0 && this.Where.Count == 0)
 				this.Where = Template.Where;
+
+			if (this.ClosestPoint != Template.ClosestPoint && Template.ClosestPoint.Count > 0 && this.ClosestPoint.Count == 0)
+				this.ClosestPoint = Template.ClosestPoint;
 
 			if (this.MaxActive != Template.MaxActive && Template.MaxActive > 0 && this.MaxActive == 0)
 				this.MaxActive = Template.MaxActive;
@@ -237,6 +242,7 @@ namespace PseudoPopParser {
 
 	public class PeriodicSpawn {
 		public List<string> Where = new List<string>();
+		public List<string> ClosestPoint = new List<string>();
 		public uint When;
 		public uint MinInterval;
 		public uint MaxInterval;
@@ -307,6 +313,7 @@ namespace PseudoPopParser {
 		public bool SupportLimited;
 		public bool RandomSpawn;
 		public List<string> Where = new List<string>();
+		public List<string> ClosestPoint = new List<string>();
 		public dynamic Spawner;
 		public string StartWaveWarningSound;
 		public string FirstSpawnWarningSound;
